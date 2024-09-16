@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Film Pomodoro</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="calendar-container">
+        <header>
+            <h1>BlUE fEElm</h1>
+        </header>
+        <div class="calendar-content">
+            <div class="calendar">
+                <div class="left">
+                    <button id="prev-date" class="spinner"></button>
+                    <p id="date">01</p>
+                    <p id="day">Sunday</p>
+                    <button id="next-date" class="spinner"></button>
+                </div>
+                <div class="right">
+                    <button id="prev-month" class="spinner"></button>
+                    <p id="month">January</p>
+                    <p id="year">2020</p>
+                    <button id="next-month" class="spinner"></button>
+                </div>   
+            </div> 
+            <div class="notes">
+                <h2 id="toggle">Click</h2>
+                <div id="feh-timer-progress">
+                    <svg class="circle-timer" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="22.5" class="circle-background"/>
+                        <circle cx="25" cy="25" r="22.5" class="circle-progress"/>
+                        <text id="feh-timer-time" x="25" y="25" text-anchor="middle" dy=".3em" font-size="9">25:00</text>
+                        <text id="feh-timer-pause" x="25" y="34" text-anchor="middle" dy=".3em" font-size="4"></text>
+                        <text id="feh-timer-rest" x="25" y="34" text-anchor="middle" dy=".3em" font-size="4"></text>
+                        <text id="feh-timer-work" x="25" y="34" text-anchor="middle" dy=".3em" font-size="4"></text>
+                    </svg>
+                </div>
+                <form id="todo-list">
+                    <ul>
+                        <li id="task1">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 1">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task2">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 2">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task3">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 3">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task4">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 4">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task5">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 5">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task6">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 6">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task7">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 7">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task8">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 8">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task9">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 9">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task10">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 10">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                        <li id="task11">
+                            <input type="checkbox" class="task-checkbox">
+                            <input type="text" class="task-input" placeholder="Task 11">
+                            <div class="time-input-wrapper">
+                                <input type="text" id="hoursInput" name="hoursInput" placeholder="H" maxlength="1" required>
+                                <span class="separator">:</span>
+                                <input type="text" id="minutesInput" name="minutesInput" placeholder="MM" maxlength="2" required>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="button-group">
+                        <div class="timer-controls">
+                            <img id="reset-button" class="reset-button" src="./Reset.png" alt="Reset">
+                            <img id="play-pause-button" class="play-pause-button" src="./Play.png" alt="Play">
+                            <img id="next-button" class="next-button" src="./Next.png" alt="Next">
+                        </div>
+                        <div class="button-groupie">
+                            <button type="button" id="import-todo-notes">Save For Tomorrow</button>
+                        </div> 
+                    </div>                   
+                </form>
+                <form id="notes-app" style="display: none;">
+                    <ul>
+                        <li><input type="text" id="note1" name="note1" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note2" name="note2" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note3" name="note3" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note4" name="note4" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note5" name="note5" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note6" name="note6" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note7" name="note7" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note8" name="note8" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note9" name="note9" placeholder="Enter your note"></li>
+                        <li><input type="text" id="note10" name="note10" placeholder="Enter your note"></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="timer-container">
+                <div id="stopwatch-section">
+                    <!-- Stopwatch content goes here -->
+                </div>
+                <div id="countdown-section" style="display: none;">
+                    <!-- Countdown content goes here -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h1>Pomodoro Duhhh</h1>
+        </footer>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC8c9JOIZolpPQpYQrEw06uo6xa6tIkehU",
+          authDomain: "pomodobf.firebaseapp.com",
+          projectId: "pomodobf",
+          storageBucket: "pomodobf.appspot.com",
+          messagingSenderId: "34432940457",
+          appId: "1:34432940457:web:d19e75d29d7145970aecb8",
+          measurementId: "G-K2SSDLVRFL"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>

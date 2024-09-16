@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.calendar-container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+header h1, footer h1 {
+    font-size: 1.6em;
+    margin: 0.5em 0;
+    font-weight: 300;
+    letter-spacing: 7px;
+}
+
+.calendar-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px dotted #aaa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.calendar {
+    width: 300px;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    position: relative;
+    left: -90px;
+}
+
+.button-groupie {
+    position:sticky;
+    top: 600px;
+    right: 730px;
+}
+
+.button-groupie button {
+    padding: 10px 20px;
+    background-color: #f4351e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+    float: left; /* This will move the button to the left */
+    margin-right: 10px; /* Optional: Adds space between this button and other elements */
+}
+
+.button-groupie button:hover {
+    background-color: #d12e19;
+}
+
+.left, .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.right {
+    width: 100%;
+    background: #f4351e;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left {
+    width: 98%;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: gray; /* Optional: Change the text color to indicate completion */
+}
+
+.spinner {
+    background-color: #e8e8e8;
+    color: #333;
+    font-size: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 5px;
+    user-select: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.spinner:hover {
+    background-color: #d4d4d4;
+    transform: scale(1.1);
+}
+
+.spinner:active {
+    background-color: #c4c4c4;
+    transform: scale(0.9);
+}
+
+#date {
+    font-size: 50px;
+    line-height: 90px;
+}
+
+#todo-list,
+#notes-app {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.task-input {
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.time-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 110px;
+    margin-right: auto;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.separator {
+    margin: 0 3px;
+    font-size: 12px;
+    color: #666;
+}
+
+.notes {
+    width: 30%;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.notes h2 {
+    font-size: 16px;
+    margin-bottom: 1em;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding-left: 240px;
+}
+
+.notes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 1px dashed #aaa;
+    padding-left: 10px;
+}
+
+.notes ul li {
+    margin-bottom: 0.5em;
+    height: 1.35em;
+    display: flex;
+    align-items: center;
+}
+
+.notes ul li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.notes ul li input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.notes ul li input[type="number"] {
+    width: 50px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*.button-group {
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    display: flex;
+    gap: 10px; /* Add some spacing between the buttons */
+}*/
+
+.notes .button-group {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 330px;
+}
+
+.notes button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid #aaa;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.timer-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+    margin-left: auto;
+    padding-right: 1px;
+    
+}
+
+.timer-controls img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+#feh-timer-progress {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 13px;
+    right: 100px;
+}
+
+.circle-timer {
+    width: 100%;
+    height: 100%;
+}
+
+.circle-background {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 5;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #00f;
+    stroke-width: 5;
+    stroke-dasharray: 141.37;
+    stroke-dashoffset: 141.37;
+    transition: stroke-dashoffset 0.5s linear;
+}
+
+#feh-timer-time,
+#feh-timer-pause,
+#feh-timer-rest,
+#feh-timer-work {
+    fill: #000;
+}
+
+.play-pause-button {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.rest-mode {
+    background-color: #f0f0f0;
+}
+
+body.work-mode {
+    background-color: #e0e0e0;
+}
+
+body.break-mode {
+    background-color: #d0d0d0;
+}
+
+label {
+    font-size: 16px;
+    color: #666;
+}
+
+.dynamic-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dynamic-input:focus {
+    border-color: #0066ff;
+    box-shadow: 0 0 8px rgba(0,102,255,0.2);
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: gray; /* Optional: Change the text color to indicate completion */
+}
+
+footer {
+    padding: 10px;
+}
